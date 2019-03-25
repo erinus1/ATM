@@ -5,15 +5,12 @@ public class ATM {
     public static void main(String[] args) {
         CreditCard myCreditCard = new CreditCard();
 
-        myCreditCard.getSomeMoney(0);
-
         // У вас теперь на счету: 100
-        myCreditCard.putSomeMoneyUp(0);
+        myCreditCard.putSomeMoneyUp(100);
 
-        // Остаток по счету: 70
-        myCreditCard.putSomeMoneyDown(0); //не нашла как сделать вычисления с этим же методом putSomeMoneyUp
+        myCreditCard.putSomeMoneyUp(150);
 
-
+        myCreditCard.withdraw(70);
     }
 }
 
