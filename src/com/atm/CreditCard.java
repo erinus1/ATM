@@ -2,22 +2,32 @@ package com.atm;
 
 public class CreditCard {
 
-    int amount = 0;
+    private int b;
+
+    protected String type; // The type of credit card
+
+    CreditCard() {
+        b = 0;
+    }
+
+    CreditCard(int a) {
+        b = a;
+    }
 
     // Снять с карты
-    public int withdraw(int amount) {
+    public int withdraw(int a) {
         // 1) вывести в консоль остаток по счету: "Остаток по счету: {некая_сумма}"
         // 2) возвращаем запрашевоемую сумму
-        this.amount = this.amount - amount;
-        System.out.println("Остаток по счету:" + this.amount);
-        return this.amount;
+        b = b - a;
+        System.out.println("Остаток по счету:" + b);
+        return b;
     }
 
     // Пополнить карту
-    public void putSomeMoneyUp(int amount) {
+    public void putSomeMoneyUp(int a) {
         // 1) добавить сумму на счет
         // 2) вывести в консоль фразу: "У вас теперь на счету: {некая_сумма}"
-        this.amount = this.amount + amount;
-        System.out.println("У вас теперь на счету:" + this.amount);
+        b = b + a;
+        System.out.println("У вас теперь на счету:" + b);
     }
 }
