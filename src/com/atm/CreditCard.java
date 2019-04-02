@@ -2,15 +2,15 @@ package com.atm;
 
 public class CreditCard {
 
-    private int b;
+    int b; //обращаемся "this" к этой переменной
 
     protected String type; // The type of credit card
 
-    CreditCard() {
+    CreditCard() { //конструктор
         b = 0;
     }
 
-    CreditCard(int a) {
+    CreditCard(int a) {  //конструктор совпадает с именем класса
         b = a;
     }
 
