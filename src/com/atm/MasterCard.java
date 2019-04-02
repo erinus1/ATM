@@ -1,13 +1,22 @@
 package com.atm;
 
-public class MasterCard extends CreditCard{
+public class MasterCard extends CreditCard {
 
-    MasterCard(String MasterCard, int i){
-        type = MasterCard;
-        System.out.println("На счету карты " + type);
+        MasterCard() {
+            super();                //super вызов контруктора из парента
+            type = "MasterCard";
+
+        }
+
+        MasterCard(int i){
+
+            super(i);
+            type = "MasterCard";
+
+            //сделать перегрузку констурктора
+
+        }
 
     }
 
-
-}
 

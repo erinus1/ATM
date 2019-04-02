@@ -7,12 +7,17 @@ public class Visa extends CreditCard{
     // создать конструктор класса Визы, который запишет в переменную type слово "visa"
     // и вызовет конструктор родителя http://developer.alexanderklimov.ru/android/java/extends.php
 
-    Visa(String Visa, int b){
-        super.b = b;
-        type = Visa;
+    Visa(){
+        super();
+        type = "visa"; //пустой конструктор из класса credit card
+    }
 
 
-        //System.out.println("На счету карты " + type + " $ " + b);
+    Visa(int b){
+
+        super(b);
+        type = "visa"; //пустой конструктор из класса credit card c int
+
 
     }
 
