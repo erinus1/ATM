@@ -2,21 +2,19 @@ package com.atm;
 
 public class MasterCard extends CreditCard {
 
-        MasterCard() {
-            super();                //super вызов контруктора из парента
-            type = "MasterCard";
-
-        }
-
-        MasterCard(int i){
-
-            super(i);
-            type = "MasterCard";
-
-            //сделать перегрузку констурктора
-
-        }
-
+    MasterCard() {
+        this(0);
     }
+
+    MasterCard(int amount) {
+        this(amount, 0);
+    }
+
+    MasterCard(int amount, int limit) {
+        cardAmount = amount;
+        creditLimitAmount = limit;
+        type = "MasterCard";
+    }
+}
 
 

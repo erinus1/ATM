@@ -10,10 +10,10 @@ public class ATM {
 
         Visa myCardVisa = new Visa(200);
 
-        MasterCard myCardMasterC = new MasterCard(300);
+        MasterCard myCardMasterC = new MasterCard(22, 33);
 
 
-
+        System.out.println(myCardMasterC.type);
 
 
     }

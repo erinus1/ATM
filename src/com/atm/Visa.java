@@ -1,28 +1,11 @@
 package com.atm;
 
+public class Visa extends CreditCard {
+    /* Создать три конструктора:
+        - пустой (начальная сумма = 0, кредитный лимит = -400)
+        - с одной переменной (начальная сумма = переданному значению, кредитный лимит = -400)
+        - с двумя (начальная сумма = переданному значению, кредитный лимит = переденному значению)
+        type = "Visa" -- всегда
+    */
 
-public class Visa extends CreditCard{
-
-
-    // создать конструктор класса Визы, который запишет в переменную type слово "visa"
-    // и вызовет конструктор родителя http://developer.alexanderklimov.ru/android/java/extends.php
-
-    Visa(){
-        super();
-        type = "visa"; //пустой конструктор из класса credit card
-    }
-
-
-    Visa(int b){
-
-        super(b);
-        type = "visa"; //пустой конструктор из класса credit card c int
-
-
-    }
-
-
-
-
-    }
-
+}
