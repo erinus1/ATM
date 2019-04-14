@@ -7,14 +7,27 @@ public class CreditCard {
     protected int creditLimitAmount;
 
     public int withdraw(int a) {
-        cardAmount = cardAmount - a;
-        System.out.println("Остаток по счету:" + cardAmount);
-        return cardAmount;
+
+        //нельзя снять больше чем сумма на карте
+
+        if ( (creditLimitAmount + cardAmount) >= a ) {
+            cardAmount = cardAmount - a;
+            System.out.println("Остаток по счету:" + cardAmount);
+            return cardAmount;
+        }
+        else {
+            return 0;
+        }
     }
 
+    //амперсанты
 
     public void putSomeMoneyUp(int a) {
-        cardAmount = cardAmount + a;
-        System.out.println("У вас теперь на счету:" + cardAmount);
+        // пополнять только в том случаи, если сумма пополнения больше нуля
+
+        if (a >= 0){
+            cardAmount = cardAmount + a;
+        }
+
     }
 }

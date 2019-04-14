@@ -11,7 +11,7 @@ public class MasterCard extends CreditCard {
     }
 
     MasterCard(int amount, int limit) {
-        cardAmount = amount;
+        putSomeMoneyUp(amount);
         creditLimitAmount = limit;
         type = "MasterCard";
     }

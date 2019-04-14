@@ -8,4 +8,21 @@ public class Visa extends CreditCard {
         type = "Visa" -- всегда
     */
 
+    Visa(){
+        this(0);
+
+    }
+
+    Visa(int cardAmount){
+        this(cardAmount, 400);
+
+    }
+
+    Visa(int cardAmount, int creditLiminAmount){
+        type = "Visa";
+        putSomeMoneyUp(cardAmount);
+        this.creditLimitAmount = creditLiminAmount;
+
+    }
+
 }
