@@ -8,7 +8,7 @@ public class CreditCard {
 
     public int withdraw(int a) {
 
-        //нельзя снять больше чем сумма на карте
+        // если сумма снятия вся сумма на карте - возвращаем 0 - нельзя снять
 
         if ( (creditLimitAmount + cardAmount) >= a ) {
             cardAmount = cardAmount - a;
@@ -20,14 +20,36 @@ public class CreditCard {
         }
     }
 
-    //амперсанты
+    /*
+    создать метод для расчета комисии при пополнении
+
+    если у карты кредитный лимит > 0 и сумма на карте > 1000 устанавливаем 1
+        или у карты кред лимит = 0 и сумма на карте >  3000
+
+    если тип карты виза прибавляем 1
+    */
+
 
     public void putSomeMoneyUp(int a) {
         // пополнять только в том случаи, если сумма пополнения больше нуля
 
-        if (a >= 0){
+        if (a >= 0 || a <= 1000){
             cardAmount = cardAmount + a;
         }
 
+        else if (a <= 5000){
+            cardAmount = cardAmount + (a - a * 2 / 100);
+        }
+
+        else if (type == "master" && a > 5000) {
+            cardAmount = cardAmount + (a - a * 3 / 100);
+        }
+
+        else {
+            cardAmount = cardAmount + (a - a * 1 / 100);
+        }
+
+
     }
+
 }
