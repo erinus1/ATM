@@ -3,12 +3,10 @@ package com.atm;
 public class CreditCard {
 
     protected int cardAmount; //обращаемся "this" к этой переменной
-    protected String type; //The type of credit card
+    protected String type;
     protected int creditLimitAmount;
 
     public int withdraw(int a) {
-
-        // если сумма снятия вся сумма на карте - возвращаем 0 - нельзя снять
 
         if ( (creditLimitAmount + cardAmount) >= a ) {
             cardAmount = cardAmount - a;
@@ -18,7 +16,23 @@ public class CreditCard {
         else {
             return 0;
         }
+
+        // если сумма снятия вся сумма на карте - возвращаем 0 - нельзя снять
+        if (a == cardAmount) {
+            cardAmount = cardAmount - a;
+            System.out.println("Всю сумму снять невозможно");
+            return 0;
+
     }
+        public int getFee (int c) {
+
+            if (creditLimitAmount > 0 && cardAmount > 1000) {
+
+            }
+
+            if (creditLimitAmount = 0 && cardAmount > 3000){}
+
+            }
 
     /*
     создать метод для расчета комисии при пополнении
@@ -31,7 +45,6 @@ public class CreditCard {
 
 
     public void putSomeMoneyUp(int a) {
-        // пополнять только в том случаи, если сумма пополнения больше нуля
 
         if (a >= 0 || a <= 1000){
             cardAmount = cardAmount + a;
@@ -48,8 +61,5 @@ public class CreditCard {
         else {
             cardAmount = cardAmount + (a - a * 1 / 100);
         }
-
-
     }
-
 }

@@ -12,8 +12,11 @@ public class ATM {
 
         MasterCard myCardMasterC = new MasterCard(22, 33);
 
-
         System.out.println(myCardMasterC.type);
+
+        CreditCard getFee = new CreditCard();
+        getFee.withdraw(4880);
+
 
 
     }
