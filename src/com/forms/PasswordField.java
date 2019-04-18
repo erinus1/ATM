@@ -13,17 +13,15 @@ public class PasswordField {
     }
 
     public void setValue (String newPassword) {
-        // устанавливать новое значение, только если:
-        // 1) длина нового значения не более 15 символов
-        // 2) новое значение не пустое
-        value = newPassword;
+        // устанавливать новое значение, только если все условия выполнены:
+        // 1) длина не больше 15 символов
+        // 2) если поле обязательное, то оно не может быть пустым
+        // 3) новый пароль не должен быть слово "password"
+        // иначе: устанавливаем значение "NOT_VALID_PASSWORD"
 
-
-        if (value.length <= 5 || value.length <= 15 && value.isEmpty() == false){
-            value == newPassword;
+        if (newPassword.length() <= 15 && newPassword.isEmpty() == false) {
+            value = newPassword;
         }
-        else {value.leght >= 16 && value.isEmpty() == false || value.length == null}
-
     }
 
     public String getValue () {
