@@ -17,6 +17,13 @@ public class PasswordField {
         // 1) длина нового значения не более 15 символов
         // 2) новое значение не пустое
         value = newPassword;
+
+
+        if (value.length <= 5 || value.length <= 15 && value.isEmpty() == false){
+            value == newPassword;
+        }
+        else {value.leght >= 16 && value.isEmpty() == false || value.length == null}
+
     }
 
     public String getValue () {
@@ -31,7 +38,6 @@ public class PasswordField {
         if (value.length() < 8) {
             return false;
         }
-
         return true;
     }
 }
